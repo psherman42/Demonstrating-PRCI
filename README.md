@@ -27,11 +27,14 @@ Frequency in Hz of a ring oscillator composed of *b* inverter gates each *a* del
 
 $\Large Hz=\frac{1}{a \cdot (1 - \frac{(trim - 16)}{b}))}$
 
-Where *trim* is the five-bit value from 0 to 31 (expressed as signed 2's complement from -16 to +15), and design paramters of two ring oscillators, **HFR** (PRCI block base 0x1000 8000) and **LFR** (AON block base 0x1000 0000), in the FE310 SoC have been determined empirically as:
+Where *trim* is the five-bit value from 0 to 31 (expressed as signed 2's complement from -16 to +15), and design paramters of two ring oscillators in the FE310 SoC have been determined empirically as:
 
-**HFR**: a=11.558, b=35
+**HFR**: a=11.558, b=35  (PRCI block base 0x1000 8000)  
+**LFR**: a=8.728, b=31  (AON block base 0x1000 0000)  
 
-**LFR**: a=8.728, b=31
+Note that the *actual* power-up default frequency of **HFR**, with trim=0 (code=16) and div=4, is **17.3 MHz**; unlike 13.8 MHz which is stated in the FE310 Manual. Actually, trim=0 with **div=5** comes closer, with 14.4 MHz. All measurement data cnd calculations are in the [prci-clock.xlsx](https://github.com/psherman42/Demonstrating-PRCI/blob/main/prci-clock.xlsx) file.
+
+Similarly, the *actual* power-up default frequency of **LFR**, with trim=0 (code=16) and div=4, is **22.9 KHz**; unlike 32 KHz which is stated in the FE310 Manual. Actually, trim=0 with **div=3** comes closer, with 28.6 KHz.
 
 In general eleven steps must be carefully followed when making transition from one clock path mode to another.
 ![FE310 PRCI Programming Sequence](https://user-images.githubusercontent.com/36460742/221101136-a13dee28-f667-4593-a86e-5df5be89b06a.PNG)

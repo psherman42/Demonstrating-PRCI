@@ -39,7 +39,7 @@ Similarly, the *actual* power-up default frequency of **LFR**, with trim=0 (code
 In general eleven steps must be carefully followed when making transition from one clock path mode to another.
 ![FE310 PRCI Programming Sequence](https://user-images.githubusercontent.com/36460742/221101136-a13dee28-f667-4593-a86e-5df5be89b06a.PNG)
 
-The block diagram shown above matches the actual, physical hardware of the FE310 SoC yet are slightly different to what is shown in the FE310 Manual.
+The block diagram shown above matches the actual, physical hardware of the FE310 SoC yet is slightly different to what is shown in the FE310 Manual.
 
 $\textcolor{red}{\text{ERRATA: The PLL's last stage divisor, term *d*, is not where shown but actually between the *pllbypass* and *pllsel* switches, at position 10 shown above. Diagrams will be revised soon. PS}}$ 
 

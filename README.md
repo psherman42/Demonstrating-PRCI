@@ -23,7 +23,7 @@ And so forth, into the HFX PLL, HFR PLL, and back to the HFX DIR paths, respecti
     clock_rpll_xdir();
     ...
 
-Freuqncy in Hz of a ring oscillator composed of *b* inverter gates each *a* delay units long is given by the following equation.
+Frequency in Hz of a ring oscillator composed of *b* inverter gates each *a* delay units long is given by the following equation.
 
 $\Large Hz=\frac{1}{a \cdot (1 - \frac{(trim - 16)}{b}))}$
 

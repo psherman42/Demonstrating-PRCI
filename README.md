@@ -41,7 +41,7 @@ In general eleven steps must be carefully followed when making transition from o
 
 The block diagram shown above matches the actual, physical hardware of the FE310 SoC yet is slightly different to what is shown in the FE310 Manual.
 
-$\textcolor{red}{\text{ERRATA: The PLL's last stage divisor, term *d*, is not where shown but actually between the *pllbypass* and *pllsel* switches, at position 10 shown above. Diagrams will be revised soon. PS}}$ 
+ERRATA: The PLL's last stage divisor, term *d*, is not where shown but actually between the *pllbypass* and *pllsel* switches, at position 10 shown above. Diagrams will be revised soon. PS
 
 #### HFX DIR
 
